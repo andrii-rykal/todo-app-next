@@ -10,12 +10,7 @@ type Props = {
   isAdding: boolean;
 };
 
-const TodoList: FC<Props> = ({
-  todos,
-  onDelete,
-  onSave,
-  isAdding,
-}) => {
+const TodoList: FC<Props> = ({ todos, onDelete, onSave, isAdding }) => {
   const [newTitle, setNewTitle] = useState('');
 
   const handleBlur = () => {
@@ -27,24 +22,20 @@ const TodoList: FC<Props> = ({
     <>
       {isAdding && (
         <TextField
-        value={newTitle}
-        onChange={(e) => setNewTitle(e.target.value)}
-        onBlur={handleBlur}
-        onKeyDown={e => e.key === 'Enter' && handleBlur()}
-        placeholder="Add new todo"
-        fullWidth
+          value={newTitle}
+          onChange={(e) => setNewTitle(e.target.value)}
+          onBlur={handleBlur}
+          onKeyDown={(e) => e.key === 'Enter' && handleBlur()}
+          placeholder="Add new todo"
+          fullWidth
           autoFocus
-          
-      />
+          slotProps={{ input: { style: { fontSize: 18 } } }}
+        />
       )}
 
       <List sx={{ p: 0, width: '100%', bgcolor: '#ffebee' }}>
         {todos.map((todo) => (
-          <TodoItem
-            todo={todo}
-            key={todo.id}
-            onDelete={onDelete}
-          />
+          <TodoItem todo={todo} key={todo.id} onDelete={onDelete} />
         ))}
       </List>
     </>

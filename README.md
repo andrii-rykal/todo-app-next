@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## To start a project:
+-- Clone a project to your computer
+-- Open the project in the code editor
+
+## Execute the commands in the terminal:
+-- npm install
+-- npm run dev
+
 ## Getting Started
 
 First, run the development server:
@@ -13,6 +21,10 @@ pnpm dev
 # or
 bun dev
 ```
+
+## Number of todos
+   To change the number of todos, pass the required number to getTodos(10), or do not pass at all to display all todos.
+   
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

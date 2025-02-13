@@ -44,7 +44,7 @@ const TodoApp = () => {
     if (!title.trim()) return;
 
     try {
-      const { data } = await createTodo({ userId: 1, title, completed: false });
+      const { data } = await createTodo({ userId: 2, title, completed: false });
       setTodos([data, ...todos]);
     } catch (error) {
       console.error('Failed to create todo:', error);

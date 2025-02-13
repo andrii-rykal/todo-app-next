@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { TodoResponse } from '@/types/todoResponse';
 import { Clear } from '@mui/icons-material';
@@ -17,8 +17,7 @@ type Props = {
   onDelete: (id: number) => void;
 };
 
-const TodoItem: FC<Props> = ({ todo, onDelete}) => {
-
+const TodoItem: FC<Props> = ({ todo, onDelete }) => {
   const handleDeleteTodo = async () => {
     onDelete(todo.id);
   };
@@ -30,10 +29,7 @@ const TodoItem: FC<Props> = ({ todo, onDelete}) => {
       >
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <Checkbox checked={todo.completed} />
-          <Typography
-            variant="h6"
-            component="p"
-          >
+          <Typography variant="h6" component="p">
             {todo.title}
           </Typography>
         </Box>

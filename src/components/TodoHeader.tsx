@@ -23,7 +23,9 @@ const TodoHeader: FC<Props> = ({ onAdd }) => {
       <Typography variant="h3" component="h1" sx={{}}>
         Todo App
       </Typography>
-      <Button variant="contained" color='primary' onClick={onAdd}>Create Todo</Button>
+      <Button variant="contained" color="primary" onClick={onAdd}>
+        Create Todo
+      </Button>
     </Box>
   );
 };
